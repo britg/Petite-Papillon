@@ -10,7 +10,19 @@
 
 
 @interface ButterfliesViewController : UITableViewController {
+	NSMutableArray *butterflies;
+	NSMutableArray *butterflyIndex;
+	NSMutableArray *butterflySearchResults;
+	
+	IBOutlet UITableViewCell *butterflyCell;
 
+	IBOutlet UISearchBar *searchBar;
+	BOOL isSearching;
 }
+
+@property (nonatomic, retain) NSMutableArray *butterflies;
+@property (nonatomic, assign) IBOutlet UITableViewCell *butterflyCell;
+
+- (void)getButterfliesFromDB;
 
 @end

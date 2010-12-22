@@ -22,6 +22,9 @@
     
     // Override point for customization after application launch.
 	DebugLog(@"Papillon taking flight!");
+	
+	// Ensure the database is loaded
+	[self setupDatabase];
 
     // Add the tab bar controller's view to the window and display.
     [self.window addSubview:tabBarController.view];
@@ -67,6 +70,37 @@
      Called when the application is about to terminate.
      See also applicationDidEnterBackground:.
      */
+}
+
+#pragma mark -
+#pragma mark Database
+
+- (void)setupDatabase {
+	// Check if the SQL database has already been saved to the users phone, if not then copy it over
+	BOOL success;
+	
+	// Create a FileManager object, we will use this to check the status
+	// of the database and to copy it over if required
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	
+	// Check if the database has already been created in the users filesystem
+	success = [fileManager fileExistsAtPath:DB_PATH];
+	
+	// If the database already exists then return without doing anything
+	if (success) {
+		DebugLog(@"Database already exists.");
+		return;
+	} else {
+		DebugLog(@"Database does not exist, creating it. %@", DB_PATH);
+	}
+	
+	// Run once
+	//-------------
+	// Get the path to the database in the application package
+	NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"papillon.sql"];
+	
+	// Copy the database from the package to the users filesystem
+	[fileManager copyItemAtPath:databasePathFromApp toPath:DB_PATH error:nil];
 }
 
 

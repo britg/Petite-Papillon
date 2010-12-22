@@ -52,6 +52,23 @@
 		EAE3163012BF12870026B775 /* libThree20UINavigator-Xcode3.2.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE315F812BF124E0026B775 /* libThree20UINavigator-Xcode3.2.5.a */; };
 		EAE3165212BF130B0026B775 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAE3165112BF130B0026B775 /* Three20.bundle */; };
 		EAE3168B12BF132C0026B775 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3168A12BF132C0026B775 /* QuartzCore.framework */; };
+		EAFE06E612C2A43B00AEEACE /* papillon.sql in Resources */ = {isa = PBXBuildFile; fileRef = EAFE06E512C2A43B00AEEACE /* papillon.sql */; };
+		EAFE070612C2A5D100AEEACE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06EE12C2A5D100AEEACE /* FMDatabaseAdditions.m */; };
+		EAFE070712C2A5D100AEEACE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06F112C2A5D100AEEACE /* FMDatabase.m */; };
+		EAFE070812C2A5D100AEEACE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06F312C2A5D100AEEACE /* FMResultSet.m */; };
+		EAFE070912C2A5D100AEEACE /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06F612C2A5D100AEEACE /* ASIAuthenticationDialog.m */; };
+		EAFE070A12C2A5D100AEEACE /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06F812C2A5D100AEEACE /* ASIFormDataRequest.m */; };
+		EAFE070B12C2A5D100AEEACE /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06FA12C2A5D100AEEACE /* ASIHTTPRequest.m */; };
+		EAFE070C12C2A5D100AEEACE /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06FE12C2A5D100AEEACE /* ASIInputStream.m */; };
+		EAFE070D12C2A5D100AEEACE /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE070012C2A5D100AEEACE /* ASINetworkQueue.m */; };
+		EAFE070E12C2A5D100AEEACE /* ASINSStringAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE070212C2A5D100AEEACE /* ASINSStringAdditions.m */; };
+		EAFE070F12C2A5D100AEEACE /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE070512C2A5D100AEEACE /* Reachability.m */; };
+		EAFE073312C2A80E00AEEACE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFE073212C2A80E00AEEACE /* CFNetwork.framework */; };
+		EAFE073512C2A81A00AEEACE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFE073412C2A81A00AEEACE /* SystemConfiguration.framework */; };
+		EAFE073712C2A82100AEEACE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFE073612C2A82100AEEACE /* MobileCoreServices.framework */; };
+		EAFE073912C2A83D00AEEACE /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFE073812C2A83D00AEEACE /* libz.1.2.3.dylib */; };
+		EAFE074512C2A91400AEEACE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFE074412C2A91400AEEACE /* libsqlite3.0.dylib */; };
+		EAFE07C012C2B40D00AEEACE /* ButterflyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE07BF12C2B40D00AEEACE /* ButterflyCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -457,6 +474,36 @@
 		EAE315A412BF124E0026B775 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../../src/three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAE3165112BF130B0026B775 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = ../../src/three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
 		EAE3168A12BF132C0026B775 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		EAFE06E512C2A43B00AEEACE /* papillon.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = papillon.sql; sourceTree = "<group>"; };
+		EAFE06EE12C2A5D100AEEACE /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		EAFE06EF12C2A5D100AEEACE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		EAFE06F012C2A5D100AEEACE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		EAFE06F112C2A5D100AEEACE /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		EAFE06F212C2A5D100AEEACE /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		EAFE06F312C2A5D100AEEACE /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		EAFE06F512C2A5D100AEEACE /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		EAFE06F612C2A5D100AEEACE /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		EAFE06F712C2A5D100AEEACE /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
+		EAFE06F812C2A5D100AEEACE /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
+		EAFE06F912C2A5D100AEEACE /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
+		EAFE06FA12C2A5D100AEEACE /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		EAFE06FB12C2A5D100AEEACE /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
+		EAFE06FC12C2A5D100AEEACE /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
+		EAFE06FD12C2A5D100AEEACE /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
+		EAFE06FE12C2A5D100AEEACE /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
+		EAFE06FF12C2A5D100AEEACE /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
+		EAFE070012C2A5D100AEEACE /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		EAFE070112C2A5D100AEEACE /* ASINSStringAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINSStringAdditions.h; sourceTree = "<group>"; };
+		EAFE070212C2A5D100AEEACE /* ASINSStringAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINSStringAdditions.m; sourceTree = "<group>"; };
+		EAFE070312C2A5D100AEEACE /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
+		EAFE070412C2A5D100AEEACE /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		EAFE070512C2A5D100AEEACE /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		EAFE073212C2A80E00AEEACE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		EAFE073412C2A81A00AEEACE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		EAFE073612C2A82100AEEACE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		EAFE073812C2A83D00AEEACE /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		EAFE074412C2A91400AEEACE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		EAFE07BF12C2B40D00AEEACE /* ButterflyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButterflyCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -475,6 +522,11 @@
 				EAE3162D12BF12850026B775 /* libThree20UICommon-Xcode3.2.5.a in Frameworks */,
 				EAE3163012BF12870026B775 /* libThree20UINavigator-Xcode3.2.5.a in Frameworks */,
 				EAE3168B12BF132C0026B775 /* QuartzCore.framework in Frameworks */,
+				EAFE073312C2A80E00AEEACE /* CFNetwork.framework in Frameworks */,
+				EAFE073512C2A81A00AEEACE /* SystemConfiguration.framework in Frameworks */,
+				EAFE073712C2A82100AEEACE /* MobileCoreServices.framework in Frameworks */,
+				EAFE073912C2A83D00AEEACE /* libz.1.2.3.dylib in Frameworks */,
+				EAFE074512C2A91400AEEACE /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +573,10 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				EAFE073212C2A80E00AEEACE /* CFNetwork.framework */,
+				EAFE073412C2A81A00AEEACE /* SystemConfiguration.framework */,
+				EAFE073612C2A82100AEEACE /* MobileCoreServices.framework */,
+				EAFE073812C2A83D00AEEACE /* libz.1.2.3.dylib */,
 			);
 			name = papillon;
 			sourceTree = "<group>";
@@ -545,6 +601,7 @@
 				EAA3D92212BFC09000585F82 /* rayray.png */,
 				EAA3D93A12BFC23D00585F82 /* heart.png */,
 				EAA3D92312BFC09000585F82 /* rayray@2x.png */,
+				EAFE06E512C2A43B00AEEACE /* papillon.sql */,
 				EAB8904D12C242D500459E00 /* Icon.png */,
 				EAB8904E12C242D500459E00 /* Icon@2x.png */,
 				EA75DEF712BEDCC000FCCD6C /* Default@2x.png */,
@@ -567,6 +624,7 @@
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765070DF74369002DB57D /* CoreGraphics.framework */,
 				EAE3168A12BF132C0026B775 /* QuartzCore.framework */,
+				EAFE074412C2A91400AEEACE /* libsqlite3.0.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -574,6 +632,8 @@
 		EA75DDB512BEC3AC00FCCD6C /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				EAFE06F412C2A5D100AEEACE /* ASIHTTPRequest */,
+				EAFE06ED12C2A5D100AEEACE /* FMDB */,
 				EA75DDB612BEC3B600FCCD6C /* RaisedCenterTabBarController */,
 			);
 			name = Support;
@@ -594,6 +654,7 @@
 				EA75DDF112BEC71900FCCD6C /* ButterfliesViewController.h */,
 				EA75DDF212BEC71900FCCD6C /* ButterfliesViewController.m */,
 				EA75DDF312BEC71900FCCD6C /* ButterfliesViewController.xib */,
+				EAFE07BF12C2B40D00AEEACE /* ButterflyCell.xib */,
 			);
 			name = Butterflies;
 			sourceTree = "<group>";
@@ -737,6 +798,43 @@
 				EAE3161212BF124E0026B775 /* UIUnitTests-Xcode3.2.2.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EAFE06ED12C2A5D100AEEACE /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE06EE12C2A5D100AEEACE /* FMDatabaseAdditions.m */,
+				EAFE06EF12C2A5D100AEEACE /* FMDatabaseAdditions.h */,
+				EAFE06F012C2A5D100AEEACE /* FMDatabase.h */,
+				EAFE06F112C2A5D100AEEACE /* FMDatabase.m */,
+				EAFE06F212C2A5D100AEEACE /* FMResultSet.h */,
+				EAFE06F312C2A5D100AEEACE /* FMResultSet.m */,
+			);
+			name = FMDB;
+			sourceTree = "<group>";
+		};
+		EAFE06F412C2A5D100AEEACE /* ASIHTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				EAFE06F512C2A5D100AEEACE /* ASIAuthenticationDialog.h */,
+				EAFE06F612C2A5D100AEEACE /* ASIAuthenticationDialog.m */,
+				EAFE06F712C2A5D100AEEACE /* ASIFormDataRequest.h */,
+				EAFE06F812C2A5D100AEEACE /* ASIFormDataRequest.m */,
+				EAFE06F912C2A5D100AEEACE /* ASIHTTPRequest.h */,
+				EAFE06FA12C2A5D100AEEACE /* ASIHTTPRequest.m */,
+				EAFE06FB12C2A5D100AEEACE /* ASIHTTPRequestConfig.h */,
+				EAFE06FC12C2A5D100AEEACE /* ASIHTTPRequestDelegate.h */,
+				EAFE06FD12C2A5D100AEEACE /* ASIInputStream.h */,
+				EAFE06FE12C2A5D100AEEACE /* ASIInputStream.m */,
+				EAFE06FF12C2A5D100AEEACE /* ASINetworkQueue.h */,
+				EAFE070012C2A5D100AEEACE /* ASINetworkQueue.m */,
+				EAFE070112C2A5D100AEEACE /* ASINSStringAdditions.h */,
+				EAFE070212C2A5D100AEEACE /* ASINSStringAdditions.m */,
+				EAFE070312C2A5D100AEEACE /* ASIProgressDelegate.h */,
+				EAFE070412C2A5D100AEEACE /* Reachability.h */,
+				EAFE070512C2A5D100AEEACE /* Reachability.m */,
+			);
+			name = ASIHTTPRequest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1147,6 +1245,8 @@
 				EAA3D94412BFC48B00585F82 /* MoodsViewController.xib in Resources */,
 				EAB8904F12C242D500459E00 /* Icon.png in Resources */,
 				EAB8905012C242D500459E00 /* Icon@2x.png in Resources */,
+				EAFE06E612C2A43B00AEEACE /* papillon.sql in Resources */,
+				EAFE07C012C2B40D00AEEACE /* ButterflyCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1166,6 +1266,16 @@
 				EA75DE0912BEC7A300FCCD6C /* ChikkensViewController.m in Sources */,
 				EAE3153012BEFA100026B775 /* NewPhotoViewController.m in Sources */,
 				EAA3D94312BFC48B00585F82 /* MoodsViewController.m in Sources */,
+				EAFE070612C2A5D100AEEACE /* FMDatabaseAdditions.m in Sources */,
+				EAFE070712C2A5D100AEEACE /* FMDatabase.m in Sources */,
+				EAFE070812C2A5D100AEEACE /* FMResultSet.m in Sources */,
+				EAFE070912C2A5D100AEEACE /* ASIAuthenticationDialog.m in Sources */,
+				EAFE070A12C2A5D100AEEACE /* ASIFormDataRequest.m in Sources */,
+				EAFE070B12C2A5D100AEEACE /* ASIHTTPRequest.m in Sources */,
+				EAFE070C12C2A5D100AEEACE /* ASIInputStream.m in Sources */,
+				EAFE070D12C2A5D100AEEACE /* ASINetworkQueue.m in Sources */,
+				EAFE070E12C2A5D100AEEACE /* ASINSStringAdditions.m in Sources */,
+				EAFE070F12C2A5D100AEEACE /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

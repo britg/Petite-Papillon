@@ -12,3 +12,5 @@
 #else
 #define DebugLog( s, ... ) 
 #endif
+
+#define DB_PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)  objectAtIndex:0] stringByAppendingPathComponent:@"papillon.sql"]

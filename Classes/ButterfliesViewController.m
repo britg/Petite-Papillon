@@ -7,10 +7,13 @@
 //
 
 #import "ButterfliesViewController.h"
+#import "FMDatabase.h"
 
 
 @implementation ButterfliesViewController
 
+@synthesize butterflies;
+@synthesize butterflyCell;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -20,6 +23,8 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Papillons";
+	
+	[self getButterfliesFromDB];
 }
 
 /*
@@ -50,33 +55,164 @@
 }
 */
 
+#pragma mark -
+#pragma mark Data source
+
+- (void)getButterfliesFromDB {
+	FMDatabase *db = [FMDatabase databaseWithPath:DB_PATH];
+	[db setLogsErrors:YES];
+	[db open];
+	NSString *query = @"SELECT * FROM butterflies ORDER BY name;";
+	
+	FMResultSet *result = [db executeQuery:query];
+	
+	self.butterflies = [[[NSMutableArray alloc] init] autorelease];
+	butterflyIndex = [[NSMutableArray alloc] init];
+	
+	
+	[butterflyIndex addObject:UITableViewIndexSearch];
+	while ([result next]) {
+		NSString *butterflyName = [result stringForColumn:@"name"];
+		[self.butterflies addObject:butterflyName];
+		char alpha = [butterflyName characterAtIndex:0];
+		NSString *uniChar = [[NSString stringWithFormat:@"%C", alpha] capitalizedString];
+		
+		if (![butterflyIndex containsObject:uniChar]) {
+			[butterflyIndex addObject:uniChar];
+		}
+	}
+	butterflySearchResults = [[NSMutableArray alloc] init];
+	[butterflySearchResults addObjectsFromArray:self.butterflies];
+}
+
+
+
+#pragma mark -
+#pragma mark Search delegate
+
+- (void) searchBarTextDidBeginEditing:(UISearchBar *)searchBarRef {
+	[self.navigationController setNavigationBarHidden:YES animated:YES];
+	searchBar.showsCancelButton = YES;
+}
+
+- (void) searchBarCancelButtonClicked:(UISearchBar *)searchBarRef {
+	isSearching = NO;
+	[searchBar resignFirstResponder];
+	[self.navigationController setNavigationBarHidden:NO animated:YES];
+	searchBar.showsCancelButton = NO;
+	searchBar.text = @"";
+	
+	[butterflySearchResults removeAllObjects];
+	[butterflySearchResults addObjectsFromArray:self.butterflies];
+	[self.tableView reloadData];
+}
+
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBarRef {
+	[searchBar resignFirstResponder];
+	[self.navigationController setNavigationBarHidden:NO animated:YES];
+	searchBar.showsCancelButton = NO;
+}
+
+- (void) searchBar:(UISearchBar *)searchBarRef textDidChange:(NSString *)searchText {
+	if ([searchText length] > 0) {
+		isSearching = YES;
+		[butterflySearchResults removeAllObjects];
+		NSString *searchText = searchBar.text;
+		DebugLog(@"search test is %@", searchText);
+		
+		for (NSString *butterfly in self.butterflies) {
+			NSRange titleResultsRange = [butterfly rangeOfString:searchText options:NSCaseInsensitiveSearch];
+			
+			if (titleResultsRange.length > 0) {
+				[butterflySearchResults addObject:butterfly];
+			}
+		}
+	} else {
+		isSearching = NO;
+		[butterflySearchResults removeAllObjects];
+		[butterflySearchResults addObjectsFromArray:self.butterflies];
+	}
+	
+	[self.tableView reloadData];
+}
 
 #pragma mark -
 #pragma mark Table view data source
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+	if (isSearching) {
+		return nil;
+	}
+	
+	return butterflyIndex;
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 0;
+	if (isSearching) {
+		return 1;
+	}
+    
+	return [butterflyIndex count];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if (section == 0) {
+		return nil;
+	}
+	return [butterflyIndex objectAtIndex:section];
+}
+
+- (NSInteger) tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title
+                atIndex:(NSInteger)index {
+    if (index == 0) {
+        [tableView setContentOffset:CGPointZero animated:NO];
+        return NSNotFound;
+    }
+    return index;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+	if (isSearching) {
+		return [butterflySearchResults count];
+	}
+    
+	NSString *alpha = [butterflyIndex objectAtIndex:section];
+	NSPredicate *predicate = 
+	[NSPredicate predicateWithFormat:@"SELF beginswith[c] %@", alpha];
+    NSArray *matches = [self.butterflies filteredArrayUsingPredicate:predicate];
+	
+	return [matches count];
 }
-
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
+    static NSString *CellIdentifier = @"ButterflyCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        [[NSBundle mainBundle] loadNibNamed:@"ButterflyCell" owner:self options:nil];
+		cell = butterflyCell;
+		self.butterflyCell = nil;
     }
+	
+	UILabel *label;
+	label = (UILabel *)[cell viewWithTag:0];
     
-    // Configure the cell...
+    if (isSearching) {
+		// Configure the cell...
+		NSString *butterflyForCell = [butterflySearchResults objectAtIndex:indexPath.row];
+		label.text = butterflyForCell;
+	} else {
+		NSString *alpha = [butterflyIndex objectAtIndex:indexPath.section];
+		NSPredicate *predicate = 
+		[NSPredicate predicateWithFormat:@"SELF beginswith[c] %@", alpha];
+		NSArray *matches = [self.butterflies filteredArrayUsingPredicate:predicate];
+		label.text = [matches objectAtIndex:indexPath.row];
+	}
     
     return cell;
 }
