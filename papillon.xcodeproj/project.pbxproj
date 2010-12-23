@@ -52,7 +52,6 @@
 		EAE3163012BF12870026B775 /* libThree20UINavigator-Xcode3.2.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE315F812BF124E0026B775 /* libThree20UINavigator-Xcode3.2.5.a */; };
 		EAE3165212BF130B0026B775 /* Three20.bundle in Resources */ = {isa = PBXBuildFile; fileRef = EAE3165112BF130B0026B775 /* Three20.bundle */; };
 		EAE3168B12BF132C0026B775 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE3168A12BF132C0026B775 /* QuartzCore.framework */; };
-		EAFE06E612C2A43B00AEEACE /* papillon.sql in Resources */ = {isa = PBXBuildFile; fileRef = EAFE06E512C2A43B00AEEACE /* papillon.sql */; };
 		EAFE070612C2A5D100AEEACE /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06EE12C2A5D100AEEACE /* FMDatabaseAdditions.m */; };
 		EAFE070712C2A5D100AEEACE /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06F112C2A5D100AEEACE /* FMDatabase.m */; };
 		EAFE070812C2A5D100AEEACE /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE06F312C2A5D100AEEACE /* FMResultSet.m */; };
@@ -69,6 +68,16 @@
 		EAFE073912C2A83D00AEEACE /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFE073812C2A83D00AEEACE /* libz.1.2.3.dylib */; };
 		EAFE074512C2A91400AEEACE /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EAFE074412C2A91400AEEACE /* libsqlite3.0.dylib */; };
 		EAFE07C012C2B40D00AEEACE /* ButterflyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE07BF12C2B40D00AEEACE /* ButterflyCell.xib */; };
+		EAFE07DF12C2B7CE00AEEACE /* ButterflyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE07DD12C2B7CE00AEEACE /* ButterflyViewController.m */; };
+		EAFE07E012C2B7CE00AEEACE /* ButterflyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE07DE12C2B7CE00AEEACE /* ButterflyViewController.xib */; };
+		EAFE086D12C37EA600AEEACE /* papillon.sql in Resources */ = {isa = PBXBuildFile; fileRef = EAFE086C12C37EA600AEEACE /* papillon.sql */; };
+		EAFE093212C3880000AEEACE /* wiki_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE093012C387FF00AEEACE /* wiki_icon.png */; };
+		EAFE093312C3880000AEEACE /* wiki_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE093112C3880000AEEACE /* wiki_icon@2x.png */; };
+		EAFE093A12C3889800AEEACE /* google_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE093812C3889800AEEACE /* google_icon.png */; };
+		EAFE093B12C3889800AEEACE /* google_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE093912C3889800AEEACE /* google_icon@2x.png */; };
+		EAFE098812C38B5000AEEACE /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE098512C38B5000AEEACE /* refresh.png */; };
+		EAFE098912C38B5000AEEACE /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE098612C38B5000AEEACE /* forward.png */; };
+		EAFE098A12C38B5000AEEACE /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE098712C38B5000AEEACE /* back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -474,7 +483,6 @@
 		EAE315A412BF124E0026B775 /* Three20UI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Three20UI.xcodeproj; path = ../../src/three20/src/Three20UI/Three20UI.xcodeproj; sourceTree = SOURCE_ROOT; };
 		EAE3165112BF130B0026B775 /* Three20.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Three20.bundle; path = ../../src/three20/src/Three20.bundle; sourceTree = SOURCE_ROOT; };
 		EAE3168A12BF132C0026B775 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		EAFE06E512C2A43B00AEEACE /* papillon.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = papillon.sql; sourceTree = "<group>"; };
 		EAFE06EE12C2A5D100AEEACE /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
 		EAFE06EF12C2A5D100AEEACE /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
 		EAFE06F012C2A5D100AEEACE /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
@@ -504,6 +512,17 @@
 		EAFE073812C2A83D00AEEACE /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		EAFE074412C2A91400AEEACE /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		EAFE07BF12C2B40D00AEEACE /* ButterflyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButterflyCell.xib; sourceTree = "<group>"; };
+		EAFE07DC12C2B7CE00AEEACE /* ButterflyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButterflyViewController.h; sourceTree = "<group>"; };
+		EAFE07DD12C2B7CE00AEEACE /* ButterflyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButterflyViewController.m; sourceTree = "<group>"; };
+		EAFE07DE12C2B7CE00AEEACE /* ButterflyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButterflyViewController.xib; sourceTree = "<group>"; };
+		EAFE086C12C37EA600AEEACE /* papillon.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = papillon.sql; sourceTree = "<group>"; };
+		EAFE093012C387FF00AEEACE /* wiki_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wiki_icon.png; sourceTree = "<group>"; };
+		EAFE093112C3880000AEEACE /* wiki_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wiki_icon@2x.png"; sourceTree = "<group>"; };
+		EAFE093812C3889800AEEACE /* google_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = google_icon.png; sourceTree = "<group>"; };
+		EAFE093912C3889800AEEACE /* google_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "google_icon@2x.png"; sourceTree = "<group>"; };
+		EAFE098512C38B5000AEEACE /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
+		EAFE098612C38B5000AEEACE /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
+		EAFE098712C38B5000AEEACE /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -601,9 +620,16 @@
 				EAA3D92212BFC09000585F82 /* rayray.png */,
 				EAA3D93A12BFC23D00585F82 /* heart.png */,
 				EAA3D92312BFC09000585F82 /* rayray@2x.png */,
-				EAFE06E512C2A43B00AEEACE /* papillon.sql */,
+				EAFE086C12C37EA600AEEACE /* papillon.sql */,
 				EAB8904D12C242D500459E00 /* Icon.png */,
+				EAFE093812C3889800AEEACE /* google_icon.png */,
+				EAFE093912C3889800AEEACE /* google_icon@2x.png */,
+				EAFE098512C38B5000AEEACE /* refresh.png */,
+				EAFE098612C38B5000AEEACE /* forward.png */,
+				EAFE098712C38B5000AEEACE /* back.png */,
 				EAB8904E12C242D500459E00 /* Icon@2x.png */,
+				EAFE093012C387FF00AEEACE /* wiki_icon.png */,
+				EAFE093112C3880000AEEACE /* wiki_icon@2x.png */,
 				EA75DEF712BEDCC000FCCD6C /* Default@2x.png */,
 				EA75DE6F12BED47D00FCCD6C /* dog_icon.png */,
 				EA75DE7012BED47D00FCCD6C /* dog_icon@2x.png */,
@@ -655,6 +681,9 @@
 				EA75DDF212BEC71900FCCD6C /* ButterfliesViewController.m */,
 				EA75DDF312BEC71900FCCD6C /* ButterfliesViewController.xib */,
 				EAFE07BF12C2B40D00AEEACE /* ButterflyCell.xib */,
+				EAFE07DC12C2B7CE00AEEACE /* ButterflyViewController.h */,
+				EAFE07DD12C2B7CE00AEEACE /* ButterflyViewController.m */,
+				EAFE07DE12C2B7CE00AEEACE /* ButterflyViewController.xib */,
 			);
 			name = Butterflies;
 			sourceTree = "<group>";
@@ -1245,8 +1274,16 @@
 				EAA3D94412BFC48B00585F82 /* MoodsViewController.xib in Resources */,
 				EAB8904F12C242D500459E00 /* Icon.png in Resources */,
 				EAB8905012C242D500459E00 /* Icon@2x.png in Resources */,
-				EAFE06E612C2A43B00AEEACE /* papillon.sql in Resources */,
 				EAFE07C012C2B40D00AEEACE /* ButterflyCell.xib in Resources */,
+				EAFE07E012C2B7CE00AEEACE /* ButterflyViewController.xib in Resources */,
+				EAFE086D12C37EA600AEEACE /* papillon.sql in Resources */,
+				EAFE093212C3880000AEEACE /* wiki_icon.png in Resources */,
+				EAFE093312C3880000AEEACE /* wiki_icon@2x.png in Resources */,
+				EAFE093A12C3889800AEEACE /* google_icon.png in Resources */,
+				EAFE093B12C3889800AEEACE /* google_icon@2x.png in Resources */,
+				EAFE098812C38B5000AEEACE /* refresh.png in Resources */,
+				EAFE098912C38B5000AEEACE /* forward.png in Resources */,
+				EAFE098A12C38B5000AEEACE /* back.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1276,6 +1313,7 @@
 				EAFE070D12C2A5D100AEEACE /* ASINetworkQueue.m in Sources */,
 				EAFE070E12C2A5D100AEEACE /* ASINSStringAdditions.m in Sources */,
 				EAFE070F12C2A5D100AEEACE /* Reachability.m in Sources */,
+				EAFE07DF12C2B7CE00AEEACE /* ButterflyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

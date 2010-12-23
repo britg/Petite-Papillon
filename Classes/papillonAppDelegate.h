@@ -18,5 +18,7 @@
 @property (nonatomic, retain) IBOutlet RaisedCenterTabBarController *tabBarController;
 
 - (void)setupDatabase;
+- (void)hideCenterButton;
+- (void)showCenterButton;
 
 @end

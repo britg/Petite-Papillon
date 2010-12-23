@@ -107,6 +107,14 @@
 #pragma mark -
 #pragma mark UITabBarControllerDelegate methods
 
+- (void)hideCenterButton {
+	self.tabBarController.centerButton.hidden = YES;
+}
+
+- (void)showCenterButton {
+	self.tabBarController.centerButton.hidden = NO;	
+}
+
 /*
 // Optional UITabBarControllerDelegate method.
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {

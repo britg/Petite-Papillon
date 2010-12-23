@@ -14,3 +14,6 @@
 #endif
 
 #define DB_PATH [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)  objectAtIndex:0] stringByAppendingPathComponent:@"papillon.sql"]
+
+#define HIDE_CENTER_BUTTON [[[UIApplication sharedApplication] delegate] hideCenterButton]
+#define SHOW_CENTER_BUTTON [[[UIApplication sharedApplication] delegate] showCenterButton]

@@ -12,10 +12,12 @@
 {
 	UIImagePickerController *cameraViewController;
 	NewPhotoViewController *photoHandler;
+	UIButton *centerButton;
 }
 
 @property (nonatomic, retain) UIImagePickerController *cameraViewController;
 @property (nonatomic, retain) NewPhotoViewController *photoHandler;
+@property (nonatomic, retain) UIButton *centerButton;
 
 // Create a view controller and setup it's tab bar item with a title and image
 -(UIViewController*) viewControllerWithTabTitle:(NSString*)title image:(UIImage*)image;

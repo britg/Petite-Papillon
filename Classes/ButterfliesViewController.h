@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ButterflyViewController.h"
+
 
 @interface ButterfliesViewController : UITableViewController {
 	NSMutableArray *butterflies;
@@ -18,10 +20,13 @@
 
 	IBOutlet UISearchBar *searchBar;
 	BOOL isSearching;
+	
+	ButterflyViewController *butterflyView;
 }
 
 @property (nonatomic, retain) NSMutableArray *butterflies;
 @property (nonatomic, assign) IBOutlet UITableViewCell *butterflyCell;
+@property (nonatomic, retain) ButterflyViewController *butterflyView;
 
 - (void)getButterfliesFromDB;
 

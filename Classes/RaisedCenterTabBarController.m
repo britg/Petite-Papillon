@@ -12,6 +12,7 @@
 
 @synthesize cameraViewController;
 @synthesize photoHandler;
+@synthesize centerButton;
 
 // Create a view controller and setup it's tab bar item with a title and image
 -(UIViewController*) viewControllerWithTabTitle:(NSString*) title image:(UIImage*)image
@@ -24,24 +25,24 @@
 // Create a custom UIButton and add it to the center of our tab bar
 -(void) addCenterButtonWithImage:(UIImage*)buttonImage highlightImage:(UIImage*)highlightImage
 {
-	UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-	button.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
-	[button setBackgroundImage:buttonImage forState:UIControlStateNormal];
-	[button setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
+	self.centerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	self.centerButton.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
+	[self.centerButton setBackgroundImage:buttonImage forState:UIControlStateNormal];
+	[self.centerButton setBackgroundImage:highlightImage forState:UIControlStateHighlighted];
 	
 	CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
 	if (heightDifference < 0)
-		button.center = self.tabBar.center;
+		self.centerButton.center = self.tabBar.center;
 	else
 	{
 		CGPoint center = self.tabBar.center;
 		center.y = center.y - heightDifference/2.0;
-		button.center = center;
+		self.centerButton.center = center;
 	}
 	
-	[button addTarget:self action:@selector(showCamera) forControlEvents:UIControlEventTouchUpInside];
+	[self.centerButton addTarget:self action:@selector(showCamera) forControlEvents:UIControlEventTouchUpInside];
 	
-	[self.view addSubview:button];
+	[self.view addSubview:self.centerButton];
 }
 
 -(void) showCamera {
