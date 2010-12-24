@@ -31,6 +31,5 @@
 @property (nonatomic, retain) UIImage *editedImage;
 
 - (void)showCamera;
-- (void)createPetPicture;
 
 @end

@@ -16,6 +16,7 @@
 @synthesize butterflyCell;
 @synthesize birdCell;
 @synthesize rayrayCell;
+@synthesize editedImage;
 
 
 #pragma mark -
@@ -27,7 +28,7 @@
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	self.navigationItem.title = @"Choose a Type";
+	self.navigationItem.title = @"What Next?";
 }
 
 
@@ -66,7 +67,10 @@
 
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	return @"Associate this photo new";
+	if (section == 0) {
+		return @"";
+	}
+	return @"Associate this photo";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -77,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-	if (section == 1) {
+	if (section == 0) {
 		return 1;
 	}
     return 3;
@@ -87,7 +91,7 @@
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	if (indexPath.section == 1) {
+	if (indexPath.section == 0) {
 		return anotherPhotoCell;
 	}
     if (indexPath.row == 0) {
@@ -145,8 +149,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	if (indexPath.row == 2) {
-		[self createPetPicture];
+	if (indexPath.section == 0) {
+		[self showCamera];
+		return;
 	}
 }
 
@@ -196,6 +201,7 @@
 	}
 }
 
+/*
 - (void)createPetPicture:(UIImage *)editedImage {
 	DebugLog(@"Writing image to local app directory");
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -207,6 +213,7 @@
 	DebugLog(@"path to image is %@", pathToImage);
 	DebugLog(@"was write successful? %@", (successfulWrite ? @"YES" : @"NO"));
 }
+ */
 
 
 #pragma mark -
