@@ -19,7 +19,6 @@
 		EA75DDFC12BEC75C00FCCD6C /* BirdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75DDFA12BEC75C00FCCD6C /* BirdsViewController.m */; };
 		EA75DDFD12BEC75C00FCCD6C /* BirdsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA75DDFB12BEC75C00FCCD6C /* BirdsViewController.xib */; };
 		EA75DE0112BEC78100FCCD6C /* RayRaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75DDFF12BEC78100FCCD6C /* RayRaysViewController.m */; };
-		EA75DE0212BEC78100FCCD6C /* RayRaysViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA75DE0012BEC78100FCCD6C /* RayRaysViewController.xib */; };
 		EA75DE0912BEC7A300FCCD6C /* ChikkensViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75DE0712BEC7A300FCCD6C /* ChikkensViewController.m */; };
 		EA75DE0A12BEC7A300FCCD6C /* ChikkensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA75DE0812BEC7A300FCCD6C /* ChikkensViewController.xib */; };
 		EA75DE3412BECA9300FCCD6C /* cameraTabBarItem.png in Resources */ = {isa = PBXBuildFile; fileRef = EA75DE3212BECA9300FCCD6C /* cameraTabBarItem.png */; };
@@ -78,6 +77,15 @@
 		EAFE098812C38B5000AEEACE /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE098512C38B5000AEEACE /* refresh.png */; };
 		EAFE098912C38B5000AEEACE /* forward.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE098612C38B5000AEEACE /* forward.png */; };
 		EAFE098A12C38B5000AEEACE /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE098712C38B5000AEEACE /* back.png */; };
+		EAFE0A7C12C3B08500AEEACE /* RayRaysPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE0A7B12C3B08500AEEACE /* RayRaysPhotoSource.m */; };
+		EAFE0A8912C3B34F00AEEACE /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE0A8812C3B34F00AEEACE /* Photo.m */; };
+		EAFE0C5F12C3DE3500AEEACE /* CureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE0C5D12C3DE3500AEEACE /* CureViewController.m */; };
+		EAFE0C6012C3DE3500AEEACE /* CureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C5E12C3DE3500AEEACE /* CureViewController.xib */; };
+		EAFE0C6312C3DE8300AEEACE /* sassy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C6212C3DE8300AEEACE /* sassy.jpg */; };
+		EAFE0C7212C3DFE200AEEACE /* happy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C7112C3DFE200AEEACE /* happy.jpg */; };
+		EAFE0C9612C3E37900AEEACE /* stressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C9512C3E37900AEEACE /* stressed.jpg */; };
+		EAFE0C9812C3E38300AEEACE /* tired.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C9712C3E38300AEEACE /* tired.jpg */; };
+		EAFE0C9A12C3E3B200AEEACE /* sad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C9912C3E3B200AEEACE /* sad.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -447,7 +455,6 @@
 		EA75DDFB12BEC75C00FCCD6C /* BirdsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirdsViewController.xib; sourceTree = "<group>"; };
 		EA75DDFE12BEC78100FCCD6C /* RayRaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RayRaysViewController.h; sourceTree = "<group>"; };
 		EA75DDFF12BEC78100FCCD6C /* RayRaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RayRaysViewController.m; sourceTree = "<group>"; };
-		EA75DE0012BEC78100FCCD6C /* RayRaysViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RayRaysViewController.xib; sourceTree = "<group>"; };
 		EA75DE0612BEC7A300FCCD6C /* ChikkensViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChikkensViewController.h; sourceTree = "<group>"; };
 		EA75DE0712BEC7A300FCCD6C /* ChikkensViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChikkensViewController.m; sourceTree = "<group>"; };
 		EA75DE0812BEC7A300FCCD6C /* ChikkensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChikkensViewController.xib; sourceTree = "<group>"; };
@@ -523,6 +530,18 @@
 		EAFE098512C38B5000AEEACE /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = refresh.png; sourceTree = "<group>"; };
 		EAFE098612C38B5000AEEACE /* forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = forward.png; sourceTree = "<group>"; };
 		EAFE098712C38B5000AEEACE /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		EAFE0A7A12C3B08500AEEACE /* RayRaysPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RayRaysPhotoSource.h; sourceTree = "<group>"; };
+		EAFE0A7B12C3B08500AEEACE /* RayRaysPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RayRaysPhotoSource.m; sourceTree = "<group>"; };
+		EAFE0A8712C3B34F00AEEACE /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		EAFE0A8812C3B34F00AEEACE /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		EAFE0C5C12C3DE3500AEEACE /* CureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CureViewController.h; sourceTree = "<group>"; };
+		EAFE0C5D12C3DE3500AEEACE /* CureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CureViewController.m; sourceTree = "<group>"; };
+		EAFE0C5E12C3DE3500AEEACE /* CureViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CureViewController.xib; sourceTree = "<group>"; };
+		EAFE0C6212C3DE8300AEEACE /* sassy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sassy.jpg; sourceTree = "<group>"; };
+		EAFE0C7112C3DFE200AEEACE /* happy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = happy.jpg; sourceTree = "<group>"; };
+		EAFE0C9512C3E37900AEEACE /* stressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stressed.jpg; sourceTree = "<group>"; };
+		EAFE0C9712C3E38300AEEACE /* tired.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tired.jpg; sourceTree = "<group>"; };
+		EAFE0C9912C3E3B200AEEACE /* sad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sad.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -615,11 +634,16 @@
 				EA75DE5312BED1C100FCCD6C /* butterfly_icon@2x.png */,
 				EA75DE5112BED1A900FCCD6C /* butterfly_icon.png */,
 				EA75DE3212BECA9300FCCD6C /* cameraTabBarItem.png */,
+				EAFE0C9512C3E37900AEEACE /* stressed.jpg */,
+				EAFE0C9912C3E3B200AEEACE /* sad.jpg */,
+				EAFE0C9712C3E38300AEEACE /* tired.jpg */,
+				EAFE0C7112C3DFE200AEEACE /* happy.jpg */,
 				EA75DE3312BECA9300FCCD6C /* cameraTabBarItem@2x.png */,
 				EA75DEF612BEDCC000FCCD6C /* Default.png */,
 				EAA3D92212BFC09000585F82 /* rayray.png */,
 				EAA3D93A12BFC23D00585F82 /* heart.png */,
 				EAA3D92312BFC09000585F82 /* rayray@2x.png */,
+				EAFE0C6212C3DE8300AEEACE /* sassy.jpg */,
 				EAFE086C12C37EA600AEEACE /* papillon.sql */,
 				EAB8904D12C242D500459E00 /* Icon.png */,
 				EAFE093812C3889800AEEACE /* google_icon.png */,
@@ -703,7 +727,8 @@
 			children = (
 				EA75DDFE12BEC78100FCCD6C /* RayRaysViewController.h */,
 				EA75DDFF12BEC78100FCCD6C /* RayRaysViewController.m */,
-				EA75DE0012BEC78100FCCD6C /* RayRaysViewController.xib */,
+				EAFE0A7A12C3B08500AEEACE /* RayRaysPhotoSource.h */,
+				EAFE0A7B12C3B08500AEEACE /* RayRaysPhotoSource.m */,
 			);
 			name = RayRays;
 			sourceTree = "<group>";
@@ -724,6 +749,8 @@
 				EAE3152D12BEFA100026B775 /* NewPhotoViewController.h */,
 				EAE3152E12BEFA100026B775 /* NewPhotoViewController.m */,
 				EAE3152F12BEFA100026B775 /* NewPhotoViewController.xib */,
+				EAFE0A8712C3B34F00AEEACE /* Photo.h */,
+				EAFE0A8812C3B34F00AEEACE /* Photo.m */,
 			);
 			name = Camera;
 			sourceTree = "<group>";
@@ -734,6 +761,9 @@
 				EAA3D94012BFC48B00585F82 /* MoodsViewController.h */,
 				EAA3D94112BFC48B00585F82 /* MoodsViewController.m */,
 				EAA3D94212BFC48B00585F82 /* MoodsViewController.xib */,
+				EAFE0C5C12C3DE3500AEEACE /* CureViewController.h */,
+				EAFE0C5D12C3DE3500AEEACE /* CureViewController.m */,
+				EAFE0C5E12C3DE3500AEEACE /* CureViewController.xib */,
 			);
 			name = Moods;
 			sourceTree = "<group>";
@@ -1252,7 +1282,6 @@
 				28AD73880D9D96C1002E5188 /* MainWindow.xib in Resources */,
 				EA75DDF512BEC71900FCCD6C /* ButterfliesViewController.xib in Resources */,
 				EA75DDFD12BEC75C00FCCD6C /* BirdsViewController.xib in Resources */,
-				EA75DE0212BEC78100FCCD6C /* RayRaysViewController.xib in Resources */,
 				EA75DE0A12BEC7A300FCCD6C /* ChikkensViewController.xib in Resources */,
 				EA75DE3412BECA9300FCCD6C /* cameraTabBarItem.png in Resources */,
 				EA75DE3512BECA9300FCCD6C /* cameraTabBarItem@2x.png in Resources */,
@@ -1284,6 +1313,12 @@
 				EAFE098812C38B5000AEEACE /* refresh.png in Resources */,
 				EAFE098912C38B5000AEEACE /* forward.png in Resources */,
 				EAFE098A12C38B5000AEEACE /* back.png in Resources */,
+				EAFE0C6012C3DE3500AEEACE /* CureViewController.xib in Resources */,
+				EAFE0C6312C3DE8300AEEACE /* sassy.jpg in Resources */,
+				EAFE0C7212C3DFE200AEEACE /* happy.jpg in Resources */,
+				EAFE0C9612C3E37900AEEACE /* stressed.jpg in Resources */,
+				EAFE0C9812C3E38300AEEACE /* tired.jpg in Resources */,
+				EAFE0C9A12C3E3B200AEEACE /* sad.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1314,6 +1349,9 @@
 				EAFE070E12C2A5D100AEEACE /* ASINSStringAdditions.m in Sources */,
 				EAFE070F12C2A5D100AEEACE /* Reachability.m in Sources */,
 				EAFE07DF12C2B7CE00AEEACE /* ButterflyViewController.m in Sources */,
+				EAFE0A7C12C3B08500AEEACE /* RayRaysPhotoSource.m in Sources */,
+				EAFE0A8912C3B34F00AEEACE /* Photo.m in Sources */,
+				EAFE0C5F12C3DE3500AEEACE /* CureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

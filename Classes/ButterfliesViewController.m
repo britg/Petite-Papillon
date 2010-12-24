@@ -63,7 +63,7 @@
 	FMDatabase *db = [FMDatabase databaseWithPath:DB_PATH];
 	[db setLogsErrors:YES];
 	[db open];
-	NSString *query = @"SELECT * FROM butterflies ORDER BY name;";
+	NSString *query = @"SELECT ROWID, * FROM butterflies ORDER BY name;";
 	
 	FMResultSet *result = [db executeQuery:query];
 	
@@ -82,6 +82,8 @@
 			[butterflyIndex addObject:uniChar];
 		}
 	}
+	[result close];
+	[db close];
 	butterflySearchResults = [[NSMutableArray alloc] init];
 	[butterflySearchResults addObjectsFromArray:self.butterflies];
 }

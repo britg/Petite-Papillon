@@ -10,8 +10,6 @@
 
 @implementation RaisedCenterTabBarController
 
-@synthesize cameraViewController;
-@synthesize photoHandler;
 @synthesize centerButton;
 
 // Create a view controller and setup it's tab bar item with a title and image
@@ -40,32 +38,12 @@
 		self.centerButton.center = center;
 	}
 	
-	[self.centerButton addTarget:self action:@selector(showCamera) forControlEvents:UIControlEventTouchUpInside];
+	[self.centerButton addTarget:self action:@selector(startNewPhoto) forControlEvents:UIControlEventTouchUpInside];
 	
 	[self.view addSubview:self.centerButton];
 }
 
--(void) showCamera {
-	DebugLog(@"Camera button selected...");
-	if (!self.cameraViewController) {
-		DebugLog(@"Camera view controller doesn't exist, so we're initializing...");
-		self.cameraViewController = [[UIImagePickerController alloc] init];
-	}
-	
-	if (!self.photoHandler) {
-		DebugLog(@"Photo handler doesn't exist, so we're initializing");
-		self.photoHandler = [[NewPhotoViewController alloc] initWithNibName:@"NewPhotoViewController" bundle:nil];
-	}
-	self.cameraViewController.delegate = self.photoHandler;
-	
-	BOOL hasCamera = [UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera];
-	
-	if (hasCamera) {
-		self.cameraViewController.sourceType = UIImagePickerControllerSourceTypeCamera;
-	} else {
-		self.cameraViewController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-	}
-	
-	[self presentModalViewController:self.cameraViewController animated:YES];
+- (void)startNewPhoto {
+	self.selectedIndex = 2;
 }
 @end

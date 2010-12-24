@@ -25,6 +25,7 @@
 	
 	// Ensure the database is loaded
 	[self setupDatabase];
+	[self setupDirectories];
 
     // Add the tab bar controller's view to the window and display.
     [self.window addSubview:tabBarController.view];
@@ -101,6 +102,30 @@
 	
 	// Copy the database from the package to the users filesystem
 	[fileManager copyItemAtPath:databasePathFromApp toPath:DB_PATH error:nil];
+}
+
+- (void)setupDirectories {
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *pathToDocuments = [paths objectAtIndex:0];
+	
+	NSString *pathToRayRays = [pathToDocuments stringByAppendingPathComponent:@"rayrays/"];
+	NSString *pathToButterflies = [pathToDocuments stringByAppendingPathComponent:@"butterflies/"];
+	NSString *pathToBirds = [pathToDocuments stringByAppendingPathComponent:@"birds/"];
+	
+	BOOL isDir = YES;
+	
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	if (![fileManager fileExistsAtPath:pathToRayRays isDirectory:&isDir]) {
+		[fileManager createDirectoryAtPath:pathToRayRays withIntermediateDirectories:NO attributes:nil error:nil];
+	}
+	
+	if (![fileManager fileExistsAtPath:pathToButterflies isDirectory:&isDir]) {
+		[fileManager createDirectoryAtPath:pathToButterflies withIntermediateDirectories:NO attributes:nil error:nil];
+	}
+	
+	if (![fileManager fileExistsAtPath:pathToBirds isDirectory:&isDir]) {
+		[fileManager createDirectoryAtPath:pathToBirds withIntermediateDirectories:NO attributes:nil error:nil];
+	}
 }
 
 

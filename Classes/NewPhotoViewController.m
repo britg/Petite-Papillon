@@ -11,24 +11,32 @@
 
 @implementation NewPhotoViewController
 
+@synthesize cameraViewController;
+@synthesize anotherPhotoCell;
+@synthesize butterflyCell;
+@synthesize birdCell;
+@synthesize rayrayCell;
+
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.navigationItem.title = @"Choose a Type";
 }
-*/
 
-/*
+
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	[self showCamera];
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -56,31 +64,39 @@
 #pragma mark -
 #pragma mark Table view data source
 
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return @"Associate this photo new";
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 0;
+    return 2;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+	if (section == 1) {
+		return 1;
+	}
+    return 3;
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-    // Configure the cell...
-    
-    return cell;
+	if (indexPath.section == 1) {
+		return anotherPhotoCell;
+	}
+    if (indexPath.row == 0) {
+		return butterflyCell;
+	} else if (indexPath.row == 1) {
+		return birdCell;
+	}
+	
+	return rayrayCell;
 }
 
 
@@ -128,18 +144,39 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+    
+	if (indexPath.row == 2) {
+		[self createPetPicture];
+	}
 }
 
 #pragma mark -
 #pragma mark UIImagePicker Delegate
+
+
+-(void) showCamera {
+	DebugLog(@"Camera button selected...");
+	if (!self.cameraViewController) {
+		DebugLog(@"Camera view controller doesn't exist, so we're initializing...");
+		self.cameraViewController = [[UIImagePickerController alloc] init];
+	}
+	
+	
+	self.cameraViewController.delegate = self;
+	
+	BOOL hasCamera = [UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera];
+	
+	if (hasCamera) {
+		self.cameraViewController.sourceType = UIImagePickerControllerSourceTypeCamera;
+	} else {
+		self.cameraViewController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+	}
+	
+	[self.cameraViewController setMediaTypes:[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera]];
+	self.cameraViewController.allowsEditing = YES;
+	
+	[self presentModalViewController:self.cameraViewController animated:YES];
+}
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
 	DebugLog(@"camera cancelled!");
@@ -149,6 +186,26 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 	DebugLog(@"camera successfully took picture!");	
 	[picker dismissModalViewControllerAnimated:YES];
+	
+	DebugLog(@"image info is %@", info);
+	self.editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
+	
+	if (self.editedImage != nil) {
+		DebugLog(@"Writing image to photos");
+		UIImageWriteToSavedPhotosAlbum(self.editedImage, nil, nil, nil);
+	}
+}
+
+- (void)createPetPicture:(UIImage *)editedImage {
+	DebugLog(@"Writing image to local app directory");
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *pathToDocuments=[paths objectAtIndex:0];
+	NSString *pathToImage = [pathToDocuments stringByAppendingPathComponent:@"rayrays/123.png"];
+	
+	DebugLog(@"image data is %@", editedImage);
+	BOOL successfulWrite = [UIImagePNGRepresentation(editedImage) writeToFile:pathToImage atomically:YES];
+	DebugLog(@"path to image is %@", pathToImage);
+	DebugLog(@"was write successful? %@", (successfulWrite ? @"YES" : @"NO"));
 }
 
 

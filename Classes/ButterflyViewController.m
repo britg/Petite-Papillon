@@ -36,7 +36,6 @@
 	self.webView.hidden = YES;
 	self.webViewToolbar.hidden = YES;
 	self.navigationItem.title = self.butterfly;
-	[self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 
@@ -58,13 +57,16 @@
 		[self loadWikipedia];
 		self.webView.hidden = NO;
 		self.webViewToolbar.hidden = NO;
+		[self.navigationController setNavigationBarHidden:YES animated:YES];
 	} else if ([item isEqual:[[self.butterflyTabBar items] objectAtIndex:1]]) {
 		[self loadGoogle];
 		self.webView.hidden = NO;
 		self.webViewToolbar.hidden = NO;
+		[self.navigationController setNavigationBarHidden:YES animated:YES];
 	} else {
 		self.webView.hidden = YES;
 		self.webViewToolbar.hidden = YES;
+		[self.navigationController setNavigationBarHidden:NO animated:YES];
 	}
 				
 

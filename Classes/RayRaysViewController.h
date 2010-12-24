@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Three20/Three20.h"
 
 
-@interface RayRaysViewController : UITableViewController {
+@interface RayRaysViewController : TTThumbsViewController {
 
 }
 

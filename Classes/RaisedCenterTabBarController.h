@@ -6,17 +6,12 @@
 //  Copyright 2010 Boctor Design. All rights reserved.
 //
 
-#import "NewPhotoViewController.h"
 
 @interface RaisedCenterTabBarController : UITabBarController
 {
-	UIImagePickerController *cameraViewController;
-	NewPhotoViewController *photoHandler;
 	UIButton *centerButton;
 }
 
-@property (nonatomic, retain) UIImagePickerController *cameraViewController;
-@property (nonatomic, retain) NewPhotoViewController *photoHandler;
 @property (nonatomic, retain) UIButton *centerButton;
 
 // Create a view controller and setup it's tab bar item with a title and image

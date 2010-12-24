@@ -11,24 +11,34 @@
 
 @implementation MoodsViewController
 
+@synthesize sadCell;
+@synthesize tiredCell;
+@synthesize frustratedCell;
+@synthesize embarassedCell;
+@synthesize stressedCell;
+@synthesize sassyCell;
+@synthesize cureView;
+
 
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+	self.navigationItem.title = @"Luuuv";
 }
-*/
 
-/*
-- (void)viewWillAppear:(BOOL)animated {
+
+
+- (void)viewDidAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	SHOW_CENTER_BUTTON;
 }
-*/
+
 /*
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -56,6 +66,11 @@
 #pragma mark -
 #pragma mark Table view data source
 
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	return @"How are you feeling?  I have just the cure...";
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
     return 1;
@@ -64,23 +79,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 4;
+    return 6;
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
-    }
-    
-    // Configure the cell...
-    
-    return cell;
+    if (indexPath.row == 0) {
+		return self.sadCell;
+	} else if (indexPath.row == 1) {
+		return self.tiredCell;
+	} else if (indexPath.row == 2) {
+		return self.frustratedCell;
+	} else if (indexPath.row == 3) {
+		return self.embarassedCell;
+	} else if (indexPath.row == 4) {
+		return self.stressedCell;
+	}
+	return sassyCell;
 }
 
 
@@ -128,14 +145,15 @@
 #pragma mark Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-    // ...
-    // Pass the selected object to the new view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
-    */
+    if (!self.cureView) {
+		self.cureView = [[CureViewController alloc] initWithNibName:@"CureViewController" bundle:nil];
+	}
+	self.cureView.hidesBottomBarWhenPushed = YES;
+	
+	HIDE_CENTER_BUTTON;
+	self.cureView.selectedMood = indexPath.row;
+	[self.navigationController pushViewController:self.cureView animated:YES];
+	
 }
 
 
