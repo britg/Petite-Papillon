@@ -7,6 +7,7 @@
 //
 
 #import "NewPhotoViewController.h"
+#import "RayRaysViewController.h"
 
 
 @implementation NewPhotoViewController
@@ -153,6 +154,11 @@
 		[self showCamera];
 		return;
 	}
+	
+	if (indexPath.row == 2) {
+		self.tabBarController.selectedIndex = 3;
+		[(RayRaysViewController *)[[[self.tabBarController viewControllers] objectAtIndex:3] topViewController] addPhoto];
+	}
 }
 
 #pragma mark -
@@ -178,7 +184,7 @@
 	}
 	
 	[self.cameraViewController setMediaTypes:[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera]];
-	self.cameraViewController.allowsEditing = YES;
+	self.cameraViewController.allowsEditing = NO;
 	
 	[self presentModalViewController:self.cameraViewController animated:YES];
 }
@@ -193,7 +199,7 @@
 	[picker dismissModalViewControllerAnimated:YES];
 	
 	DebugLog(@"image info is %@", info);
-	self.editedImage = [info objectForKey:UIImagePickerControllerEditedImage];
+	self.editedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
 	
 	if (self.editedImage != nil) {
 		DebugLog(@"Writing image to photos");

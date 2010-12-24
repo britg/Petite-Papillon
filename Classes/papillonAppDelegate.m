@@ -109,6 +109,7 @@
 	NSString *pathToDocuments = [paths objectAtIndex:0];
 	
 	NSString *pathToRayRays = [pathToDocuments stringByAppendingPathComponent:@"rayrays/"];
+	NSString *pathToRayRayThumbs = [pathToDocuments stringByAppendingPathComponent:@"rayray_thumbs/"];
 	NSString *pathToButterflies = [pathToDocuments stringByAppendingPathComponent:@"butterflies/"];
 	NSString *pathToBirds = [pathToDocuments stringByAppendingPathComponent:@"birds/"];
 	
@@ -117,6 +118,9 @@
 	NSFileManager *fileManager = [NSFileManager defaultManager];
 	if (![fileManager fileExistsAtPath:pathToRayRays isDirectory:&isDir]) {
 		[fileManager createDirectoryAtPath:pathToRayRays withIntermediateDirectories:NO attributes:nil error:nil];
+	}
+	if (![fileManager fileExistsAtPath:pathToRayRayThumbs isDirectory:&isDir]) {
+		[fileManager createDirectoryAtPath:pathToRayRayThumbs withIntermediateDirectories:NO attributes:nil error:nil];
 	}
 	
 	if (![fileManager fileExistsAtPath:pathToButterflies isDirectory:&isDir]) {

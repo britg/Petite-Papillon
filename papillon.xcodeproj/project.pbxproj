@@ -86,6 +86,8 @@
 		EAFE0C9612C3E37900AEEACE /* stressed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C9512C3E37900AEEACE /* stressed.jpg */; };
 		EAFE0C9812C3E38300AEEACE /* tired.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C9712C3E38300AEEACE /* tired.jpg */; };
 		EAFE0C9A12C3E3B200AEEACE /* sad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C9912C3E3B200AEEACE /* sad.jpg */; };
+		EAFE0D2D12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE0D2B12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m */; };
+		EAFE0D2E12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0D2C12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -542,6 +544,9 @@
 		EAFE0C9512C3E37900AEEACE /* stressed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stressed.jpg; sourceTree = "<group>"; };
 		EAFE0C9712C3E38300AEEACE /* tired.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tired.jpg; sourceTree = "<group>"; };
 		EAFE0C9912C3E3B200AEEACE /* sad.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sad.jpg; sourceTree = "<group>"; };
+		EAFE0D2A12C4D3BD00AEEACE /* AddRayRayPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRayRayPhotoViewController.h; sourceTree = "<group>"; };
+		EAFE0D2B12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRayRayPhotoViewController.m; sourceTree = "<group>"; };
+		EAFE0D2C12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRayRayPhotoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -729,6 +734,9 @@
 				EA75DDFF12BEC78100FCCD6C /* RayRaysViewController.m */,
 				EAFE0A7A12C3B08500AEEACE /* RayRaysPhotoSource.h */,
 				EAFE0A7B12C3B08500AEEACE /* RayRaysPhotoSource.m */,
+				EAFE0D2A12C4D3BD00AEEACE /* AddRayRayPhotoViewController.h */,
+				EAFE0D2B12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m */,
+				EAFE0D2C12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib */,
 			);
 			name = RayRays;
 			sourceTree = "<group>";
@@ -1319,6 +1327,7 @@
 				EAFE0C9612C3E37900AEEACE /* stressed.jpg in Resources */,
 				EAFE0C9812C3E38300AEEACE /* tired.jpg in Resources */,
 				EAFE0C9A12C3E3B200AEEACE /* sad.jpg in Resources */,
+				EAFE0D2E12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1352,6 +1361,7 @@
 				EAFE0A7C12C3B08500AEEACE /* RayRaysPhotoSource.m in Sources */,
 				EAFE0A8912C3B34F00AEEACE /* Photo.m in Sources */,
 				EAFE0C5F12C3DE3500AEEACE /* CureViewController.m in Sources */,
+				EAFE0D2D12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

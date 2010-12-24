@@ -14,6 +14,38 @@
 @synthesize title = _title;
 @synthesize photos = _photos;
 
+- (id) init {
+	self = [super init];
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *pathToDocuments=[paths objectAtIndex:0];
+	
+	NSError *error;
+	NSFileManager *fileMgr = [NSFileManager defaultManager];
+	NSString *pathToRayRays = [pathToDocuments stringByAppendingPathComponent:@"rayrays/"];
+	NSArray *rayRayContents = [fileMgr contentsOfDirectoryAtPath:pathToRayRays error:&error];
+	
+	// Write out the contents of home directory to console
+	DebugLog(@"rays rays directory: %@", rayRayContents);
+	
+	NSMutableArray *tempPhotos = [[[NSMutableArray alloc] init] autorelease];
+	
+	for (int i=0; i < rayRayContents.count; i++) {
+		NSString *path = [NSString stringWithFormat:@"documents://rayrays/%@", [rayRayContents objectAtIndex:i]];
+		NSString *thumbPath = [NSString stringWithFormat:@"documents://rayray_thumbs/%@", [rayRayContents objectAtIndex:i]];
+		Photo *photo = [[[Photo alloc] initWithCaption:@"" 
+											  urlLarge:path
+											  urlSmall:thumbPath  
+											  urlThumb:thumbPath
+												  size:CGSizeMake(1024, 768)] autorelease];
+		photo.photoSource = self;
+		photo.index = i;
+		[tempPhotos addObject:photo];
+	}
+	
+	self.photos = tempPhotos;
+	return self;
+}
+
 - (id) initWithTitle:(NSString *)title photos:(NSArray *)photos {
     if ((self = [super init])) {
         self.title = title;
@@ -25,6 +57,16 @@
         }        
     }
     return self;
+}
+
+#pragma mark TTModel
+
+- (BOOL)isLoading { 
+    return FALSE;
+}
+
+- (BOOL)isLoaded {
+    return TRUE;
 }
 
 - (NSInteger)numberOfPhotos {
@@ -48,33 +90,10 @@
 	}
 }
 
-static RayRaysPhotoSource *samplePhotoSet = nil;
-
-+ (RayRaysPhotoSource *) samplePhotoSet {
-    @synchronized(self) {
-        if (samplePhotoSet == nil) {
-			NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-			NSString *pathToDocuments=[paths objectAtIndex:0];
-			NSString *pathToImage = [NSString stringWithFormat:@"document:/%@", [pathToDocuments stringByAppendingPathComponent:@"rayrays/123.png"]];
-			
-			DebugLog(@"path to image is %@", pathToImage);
-			
-			NSError *error;
-			NSFileManager *fileMgr = [NSFileManager defaultManager];
-			NSString *pathToRayRays = [pathToDocuments stringByAppendingPathComponent:@"rayrays/"];
-			// Write out the contents of home directory to console
-			DebugLog(@"rays rays directory: %@", [fileMgr contentsOfDirectoryAtPath:pathToRayRays error:&error]);
-			
-            Photo *sampleImage = [[[Photo alloc] initWithCaption:@"" 
-                                                      urlLarge:@"documents://rayrays/123.png"
-                                                      urlSmall:@"documents://rayrays/123.png"  
-                                                      urlThumb:@"documents://rayrays/123.png"
-                                                          size:CGSizeMake(1024, 768)] autorelease];
-            NSArray *photos = [NSArray arrayWithObjects:sampleImage, nil];
-            samplePhotoSet = [[self alloc] initWithTitle:@"RayRays" photos:photos];
-        }
-    }
-    return samplePhotoSet;
+- (void) dealloc {
+    self.title = nil;
+    self.photos = nil;    
+    [super dealloc];
 }
 
 @end

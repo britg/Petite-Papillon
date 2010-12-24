@@ -8,10 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "Three20/Three20.h"
+#import "AddRayRayPhotoViewController.h"
+#import "RayRaysPhotoSource.h"
 
 
-@interface RayRaysViewController : TTThumbsViewController {
-
+@interface RayRaysViewController : TTThumbsViewController <TTThumbsViewControllerDelegate> {
+	UIBarButtonItem *addButton;
+	AddRayRayPhotoViewController *picker;
+	RayRaysPhotoSource *photoSet;
 }
+
+@property (nonatomic, retain) UIBarButtonItem *addButton;
+@property (nonatomic, retain) AddRayRayPhotoViewController *picker;
+@property (nonatomic, retain) RayRaysPhotoSource *photoSet;
+
+- (void)createAddButton;
+- (void)refreshSources;
+- (void)addPhoto;
 
 @end

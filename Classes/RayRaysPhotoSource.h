@@ -17,6 +17,4 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, retain) NSArray *photos;
 
-+ (RayRaysPhotoSource *)samplePhotoSet;
-
 @end
