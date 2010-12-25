@@ -265,6 +265,29 @@
 	[self.navigationController pushViewController:self.butterflyView animated:YES];
 }
 
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+	//DebugLog(@"Editing style %@", editingStyle);
+	if (editingStyle == UITableViewCellEditingStyleDelete) {
+		UITableViewCell *selectedCell = [self.tableView cellForRowAtIndexPath:indexPath];
+		UILabel *label = (UILabel *)[selectedCell viewWithTag:0];
+		
+		DebugLog(@"The deleted butterfly was %@", label);
+		
+		// Set bird rowid
+		FMDatabase *db = [FMDatabase databaseWithPath:DB_PATH];
+		[db setLogsErrors:YES];
+		[db open];
+		NSString *query = @"DELETE FROM butterflies WHERE name = ?";
+		
+		[db executeUpdate:query, label.text];
+		[db close];
+		[self getButterfliesFromDB];
+		
+		[self.tableView deleteRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath, nil] withRowAnimation:UITableViewRowAnimationFade];
+	}
+}
+
 #pragma mark -
 #pragma mark Actions
 
