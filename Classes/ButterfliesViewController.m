@@ -15,6 +15,8 @@
 @synthesize butterflies;
 @synthesize butterflyCell;
 @synthesize butterflyView;
+@synthesize addButterflyView;
+@synthesize addButton;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -24,13 +26,18 @@
     [super viewDidLoad];
 
     self.navigationItem.title = @"Papillons";
+	self.navigationItem.rightBarButtonItem = self.addButton;
 	
-	[self getButterfliesFromDB];
 }
 
+- (void)reloadButterflies {
+	[self getButterfliesFromDB];
+	[self.tableView reloadData];
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	[self reloadButterflies];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -256,6 +263,18 @@
 	HIDE_CENTER_BUTTON;
 	[self.navigationController setNavigationBarHidden:NO animated:YES];
 	[self.navigationController pushViewController:self.butterflyView animated:YES];
+}
+
+#pragma mark -
+#pragma mark Actions
+
+- (IBAction)addButterfly {
+	DebugLog(@"Add butterfly action called");
+	
+	if (!self.addButterflyView) {
+		self.addButterflyView = [[AddButterflyViewController alloc] initWithNibName:@"AddButterflyViewController" bundle:nil];
+	}
+	[self.navigationController pushViewController:self.addButterflyView animated:YES];	
 }
 
 

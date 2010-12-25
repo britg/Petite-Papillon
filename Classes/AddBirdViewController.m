@@ -155,6 +155,8 @@
 	[db commit];
 	[db close];
 	
+	self.birdName.text = @"";
+	
 	[self.navigationController popViewControllerAnimated:YES];
 }
 

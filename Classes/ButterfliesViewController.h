@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "ButterflyViewController.h"
+#import "AddButterflyViewController.h"
 
 
 @interface ButterfliesViewController : UITableViewController {
@@ -22,15 +23,20 @@
 	BOOL isSearching;
 	
 	ButterflyViewController *butterflyView;
+	AddButterflyViewController *addButterflyView;
 	
-
+	IBOutlet UIBarButtonItem *addButton;
 }
 
 @property (nonatomic, retain) NSMutableArray *butterflies;
 @property (nonatomic, assign) IBOutlet UITableViewCell *butterflyCell;
 @property (nonatomic, retain) ButterflyViewController *butterflyView;
+@property (nonatomic, retain) AddButterflyViewController *addButterflyView;
 
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *addButton;
 
 - (void)getButterfliesFromDB;
+- (IBAction)addButterfly;
+- (void)reloadButterflies;
 
 @end
