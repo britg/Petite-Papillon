@@ -111,7 +111,9 @@
 	NSString *pathToRayRays = [pathToDocuments stringByAppendingPathComponent:@"rayrays/"];
 	NSString *pathToRayRayThumbs = [pathToDocuments stringByAppendingPathComponent:@"rayray_thumbs/"];
 	NSString *pathToButterflies = [pathToDocuments stringByAppendingPathComponent:@"butterflies/"];
+	NSString *pathToButterflyThumbs = [pathToDocuments stringByAppendingPathComponent:@"butterfly_thumbs/"];
 	NSString *pathToBirds = [pathToDocuments stringByAppendingPathComponent:@"birds/"];
+	NSString *pathToBirdThumbs = [pathToDocuments stringByAppendingPathComponent:@"bird_thumbs/"];
 	
 	BOOL isDir = YES;
 	
@@ -126,9 +128,15 @@
 	if (![fileManager fileExistsAtPath:pathToButterflies isDirectory:&isDir]) {
 		[fileManager createDirectoryAtPath:pathToButterflies withIntermediateDirectories:NO attributes:nil error:nil];
 	}
+	if (![fileManager fileExistsAtPath:pathToButterflyThumbs isDirectory:&isDir]) {
+		[fileManager createDirectoryAtPath:pathToButterflyThumbs withIntermediateDirectories:NO attributes:nil error:nil];
+	}
 	
 	if (![fileManager fileExistsAtPath:pathToBirds isDirectory:&isDir]) {
 		[fileManager createDirectoryAtPath:pathToBirds withIntermediateDirectories:NO attributes:nil error:nil];
+	}
+	if (![fileManager fileExistsAtPath:pathToBirdThumbs isDirectory:&isDir]) {
+		[fileManager createDirectoryAtPath:pathToBirdThumbs withIntermediateDirectories:NO attributes:nil error:nil];
 	}
 }
 

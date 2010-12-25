@@ -155,6 +155,16 @@
 		return;
 	}
 	
+	if (indexPath.row == 0) {
+		self.tabBarController.selectedIndex = 0;
+		[[[self.tabBarController viewControllers] objectAtIndex:0] popToRootViewControllerAnimated:NO];
+	}
+	
+	if (indexPath.row == 1) {
+		self.tabBarController.selectedIndex = 1;
+		[[[self.tabBarController viewControllers] objectAtIndex:1] popToRootViewControllerAnimated:NO];
+	}
+	
 	if (indexPath.row == 2) {
 		self.tabBarController.selectedIndex = 3;
 		[(RayRaysViewController *)[[[self.tabBarController viewControllers] objectAtIndex:3] topViewController] addPhoto];

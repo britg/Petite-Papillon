@@ -6,13 +6,13 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import "ButterflyViewController.h"
+#import "BirdViewController.h"
 
 
-@implementation ButterflyViewController
+@implementation BirdViewController
 
-@synthesize butterfly;
-@synthesize butterflyTabBar;
+@synthesize bird;
+@synthesize birdTabBar;
 @synthesize webView;
 @synthesize webViewToolbar;
 @synthesize photoSet;
@@ -27,10 +27,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	DebugLog(@"View did load");
-	//self.butterflyTabBar.selectedItem = [[self.butterflyTabBar items] objectAtIndex:0];
+	//self.birdTabBar.selectedItem = [[self.butterflyTabBar items] objectAtIndex:0];
 	self.webView.hidden = YES;
 	self.webViewToolbar.hidden = YES;
-	self.navigationItem.title = self.butterfly;
+	self.navigationItem.title = self.bird;
 	self.navigationItem.rightBarButtonItem = self.addButton;
 	self.thumbsView = [[TTThumbsViewController alloc] init];
 	self.thumbsView.delegate = self;
@@ -49,27 +49,26 @@
 	[super viewDidAppear:animated];
 	self.navigationController.navigationBar.barStyle = UIBarStyleDefault;
 	self.navigationController.navigationBar.tintColor = UIColorFromRGB(0x5B36A0);
-	
 }
 
 - (void)refreshSources {
 	self.photoSet = nil;
 	self.thumbsView.photoSource = nil;
 	DebugLog(@"Setting photoset rowID to %i", self.rowID);
-	self.photoSet = [[ButterfliesPhotoSource alloc] initWithRowID:self.rowID];
-
-
+	self.photoSet = [[BirdsPhotoSource alloc] initWithRowID:self.rowID];
+	
+	
 	self.thumbsView.photoSource = self.photoSet;
 }
 
 
 /*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations.
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
+ // Override to allow orientations other than the default portrait orientation.
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+ // Return YES for supported orientations.
+ return (interfaceOrientation == UIInterfaceOrientationPortrait);
+ }
+ */
 
 #pragma mark -
 #pragma mark UITabBarDelegate Protocol
@@ -77,12 +76,12 @@
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
 	DebugLog(@"Tab bar item selected: %@", item);
 	
-	if ([item isEqual:[[self.butterflyTabBar items] objectAtIndex:2]]) {
+	if ([item isEqual:[[self.birdTabBar items] objectAtIndex:2]]) {
 		[self loadWikipedia];
 		self.webView.hidden = NO;
 		self.webViewToolbar.hidden = NO;
 		[self.navigationController setNavigationBarHidden:YES animated:YES];
-	} else if ([item isEqual:[[self.butterflyTabBar items] objectAtIndex:1]]) {
+	} else if ([item isEqual:[[self.birdTabBar items] objectAtIndex:1]]) {
 		[self loadGoogle];
 		self.webView.hidden = NO;
 		self.webViewToolbar.hidden = NO;
@@ -92,13 +91,13 @@
 		self.webViewToolbar.hidden = YES;
 		[self.navigationController setNavigationBarHidden:NO animated:YES];
 	}
-				
-
+	
+	
 }
 
 - (void)loadWikipedia {
 	NSString *path = [NSString stringWithFormat:@"http://en.wikipedia.org/wiki/%@", 
-					  [self.butterfly stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+					  [self.bird stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	DebugLog(@"string url is %@", path);
 	NSURL *url = [NSURL URLWithString:path];
 	DebugLog(@"url is %@", url);
@@ -110,7 +109,7 @@
 
 - (void)loadGoogle {
 	NSString *path = [NSString stringWithFormat:@"http://www.google.com/?q=%@", 
-					  [[NSString stringWithFormat:@"%@ butterfly", self.butterfly] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+					  [[NSString stringWithFormat:@"%@ bird", self.bird] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
 	DebugLog(@"string url is %@", path);
 	NSURL *url = [NSURL URLWithString:path];
 	DebugLog(@"url is %@", url);
@@ -149,9 +148,9 @@
 #pragma mark Actions
 
 - (IBAction)addPhoto {
-	DebugLog(@"Adding a photo from butterfly %@ id: %i", self.butterfly, self.rowID);
+	DebugLog(@"Adding a photo from bird %@ id: %i", self.bird, self.rowID);
 	if (!self.addPhotoView) {
-		self.addPhotoView = [[AddButterflyPhotoViewController alloc] initWithNibName:@"AddButterflyPhotoViewController" bundle:nil];
+		self.addPhotoView = [[AddBirdPhotoViewController alloc] initWithNibName:@"AddBirdPhotoViewController" bundle:nil];
 	}
 	self.addPhotoView.rowID = self.rowID;
 	[self.navigationController pushViewController:self.addPhotoView animated:YES];
@@ -172,7 +171,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
-	self.butterflyTabBar = nil;
+	self.birdTabBar = nil;
 	self.webView = nil;
 	self.webViewToolbar = nil;
 }

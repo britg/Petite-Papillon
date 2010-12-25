@@ -22,11 +22,14 @@
 	BOOL isSearching;
 	
 	ButterflyViewController *butterflyView;
+	
+
 }
 
 @property (nonatomic, retain) NSMutableArray *butterflies;
 @property (nonatomic, assign) IBOutlet UITableViewCell *butterflyCell;
 @property (nonatomic, retain) ButterflyViewController *butterflyView;
+
 
 - (void)getButterfliesFromDB;
 

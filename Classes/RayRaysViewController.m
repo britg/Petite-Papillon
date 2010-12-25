@@ -24,11 +24,12 @@
 	DebugLog(@"Ray Ray photo view is loading!!");
 	self.navigationBarTintColor = UIColorFromRGB(0x5B36A0);
 	self.navigationItem.title = @"RayRays";
-	[self createAddButton];
 	self.delegate = self;
+	[self createAddButton];
 }
 
 - (void)createAddButton {
+	DebugLog(@"Creating add button");
 	self.addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPhoto)];
 	self.navigationItem.rightBarButtonItem = self.addButton;
 }

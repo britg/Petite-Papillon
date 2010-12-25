@@ -88,6 +88,16 @@
 		EAFE0C9A12C3E3B200AEEACE /* sad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0C9912C3E3B200AEEACE /* sad.jpg */; };
 		EAFE0D2D12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE0D2B12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m */; };
 		EAFE0D2E12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE0D2C12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib */; };
+		EAFE100312C505A700AEEACE /* ButterfliesPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE100212C505A700AEEACE /* ButterfliesPhotoSource.m */; };
+		EAFE102212C5073F00AEEACE /* 86-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = EAFE102112C5073F00AEEACE /* 86-camera.png */; };
+		EAFE103112C5084500AEEACE /* AddButterflyPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE102F12C5084500AEEACE /* AddButterflyPhotoViewController.m */; };
+		EAFE103212C5084500AEEACE /* AddButterflyPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE103012C5084500AEEACE /* AddButterflyPhotoViewController.xib */; };
+		EAFE10E512C517F800AEEACE /* BirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE10E312C517F800AEEACE /* BirdViewController.m */; };
+		EAFE10E612C517F800AEEACE /* BirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE10E412C517F800AEEACE /* BirdViewController.xib */; };
+		EAFE10E812C519A900AEEACE /* BirdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE10E712C519A900AEEACE /* BirdCell.xib */; };
+		EAFE115912C51B0000AEEACE /* BirdsPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE115812C51B0000AEEACE /* BirdsPhotoSource.m */; };
+		EAFE115E12C51B6E00AEEACE /* AddBirdPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE115C12C51B6E00AEEACE /* AddBirdPhotoViewController.m */; };
+		EAFE115F12C51B6E00AEEACE /* AddBirdPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE115D12C51B6E00AEEACE /* AddBirdPhotoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -547,6 +557,21 @@
 		EAFE0D2A12C4D3BD00AEEACE /* AddRayRayPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRayRayPhotoViewController.h; sourceTree = "<group>"; };
 		EAFE0D2B12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRayRayPhotoViewController.m; sourceTree = "<group>"; };
 		EAFE0D2C12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddRayRayPhotoViewController.xib; sourceTree = "<group>"; };
+		EAFE100112C505A700AEEACE /* ButterfliesPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButterfliesPhotoSource.h; sourceTree = "<group>"; };
+		EAFE100212C505A700AEEACE /* ButterfliesPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButterfliesPhotoSource.m; sourceTree = "<group>"; };
+		EAFE102112C5073F00AEEACE /* 86-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "86-camera.png"; sourceTree = "<group>"; };
+		EAFE102E12C5084500AEEACE /* AddButterflyPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddButterflyPhotoViewController.h; sourceTree = "<group>"; };
+		EAFE102F12C5084500AEEACE /* AddButterflyPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddButterflyPhotoViewController.m; sourceTree = "<group>"; };
+		EAFE103012C5084500AEEACE /* AddButterflyPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddButterflyPhotoViewController.xib; sourceTree = "<group>"; };
+		EAFE10E212C517F800AEEACE /* BirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdViewController.h; sourceTree = "<group>"; };
+		EAFE10E312C517F800AEEACE /* BirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdViewController.m; sourceTree = "<group>"; };
+		EAFE10E412C517F800AEEACE /* BirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirdViewController.xib; sourceTree = "<group>"; };
+		EAFE10E712C519A900AEEACE /* BirdCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirdCell.xib; sourceTree = "<group>"; };
+		EAFE115712C51B0000AEEACE /* BirdsPhotoSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BirdsPhotoSource.h; sourceTree = "<group>"; };
+		EAFE115812C51B0000AEEACE /* BirdsPhotoSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BirdsPhotoSource.m; sourceTree = "<group>"; };
+		EAFE115B12C51B6E00AEEACE /* AddBirdPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBirdPhotoViewController.h; sourceTree = "<group>"; };
+		EAFE115C12C51B6E00AEEACE /* AddBirdPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBirdPhotoViewController.m; sourceTree = "<group>"; };
+		EAFE115D12C51B6E00AEEACE /* AddBirdPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBirdPhotoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -644,6 +669,7 @@
 				EAFE0C9712C3E38300AEEACE /* tired.jpg */,
 				EAFE0C7112C3DFE200AEEACE /* happy.jpg */,
 				EA75DE3312BECA9300FCCD6C /* cameraTabBarItem@2x.png */,
+				EAFE102112C5073F00AEEACE /* 86-camera.png */,
 				EA75DEF612BEDCC000FCCD6C /* Default.png */,
 				EAA3D92212BFC09000585F82 /* rayray.png */,
 				EAA3D93A12BFC23D00585F82 /* heart.png */,
@@ -713,6 +739,11 @@
 				EAFE07DC12C2B7CE00AEEACE /* ButterflyViewController.h */,
 				EAFE07DD12C2B7CE00AEEACE /* ButterflyViewController.m */,
 				EAFE07DE12C2B7CE00AEEACE /* ButterflyViewController.xib */,
+				EAFE100112C505A700AEEACE /* ButterfliesPhotoSource.h */,
+				EAFE100212C505A700AEEACE /* ButterfliesPhotoSource.m */,
+				EAFE102E12C5084500AEEACE /* AddButterflyPhotoViewController.h */,
+				EAFE102F12C5084500AEEACE /* AddButterflyPhotoViewController.m */,
+				EAFE103012C5084500AEEACE /* AddButterflyPhotoViewController.xib */,
 			);
 			name = Butterflies;
 			sourceTree = "<group>";
@@ -723,6 +754,15 @@
 				EA75DDF912BEC75C00FCCD6C /* BirdsViewController.h */,
 				EA75DDFA12BEC75C00FCCD6C /* BirdsViewController.m */,
 				EA75DDFB12BEC75C00FCCD6C /* BirdsViewController.xib */,
+				EAFE10E212C517F800AEEACE /* BirdViewController.h */,
+				EAFE10E312C517F800AEEACE /* BirdViewController.m */,
+				EAFE10E412C517F800AEEACE /* BirdViewController.xib */,
+				EAFE10E712C519A900AEEACE /* BirdCell.xib */,
+				EAFE115712C51B0000AEEACE /* BirdsPhotoSource.h */,
+				EAFE115812C51B0000AEEACE /* BirdsPhotoSource.m */,
+				EAFE115B12C51B6E00AEEACE /* AddBirdPhotoViewController.h */,
+				EAFE115C12C51B6E00AEEACE /* AddBirdPhotoViewController.m */,
+				EAFE115D12C51B6E00AEEACE /* AddBirdPhotoViewController.xib */,
 			);
 			name = Birds;
 			sourceTree = "<group>";
@@ -1328,6 +1368,11 @@
 				EAFE0C9812C3E38300AEEACE /* tired.jpg in Resources */,
 				EAFE0C9A12C3E3B200AEEACE /* sad.jpg in Resources */,
 				EAFE0D2E12C4D3BD00AEEACE /* AddRayRayPhotoViewController.xib in Resources */,
+				EAFE102212C5073F00AEEACE /* 86-camera.png in Resources */,
+				EAFE103212C5084500AEEACE /* AddButterflyPhotoViewController.xib in Resources */,
+				EAFE10E612C517F800AEEACE /* BirdViewController.xib in Resources */,
+				EAFE10E812C519A900AEEACE /* BirdCell.xib in Resources */,
+				EAFE115F12C51B6E00AEEACE /* AddBirdPhotoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1362,6 +1407,11 @@
 				EAFE0A8912C3B34F00AEEACE /* Photo.m in Sources */,
 				EAFE0C5F12C3DE3500AEEACE /* CureViewController.m in Sources */,
 				EAFE0D2D12C4D3BD00AEEACE /* AddRayRayPhotoViewController.m in Sources */,
+				EAFE100312C505A700AEEACE /* ButterfliesPhotoSource.m in Sources */,
+				EAFE103112C5084500AEEACE /* AddButterflyPhotoViewController.m in Sources */,
+				EAFE10E512C517F800AEEACE /* BirdViewController.m in Sources */,
+				EAFE115912C51B0000AEEACE /* BirdsPhotoSource.m in Sources */,
+				EAFE115E12C51B6E00AEEACE /* AddBirdPhotoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

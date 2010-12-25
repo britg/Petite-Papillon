@@ -233,12 +233,28 @@
 	self.butterflyView = nil;
 	if (!self.butterflyView) {
 		self.butterflyView = [[ButterflyViewController alloc] initWithNibName:@"ButterflyViewController" bundle:nil];
-		self.butterflyView.butterfly = label.text;
+	
 	}
-
+	
+	self.butterflyView.butterfly = label.text;
 	self.butterflyView.hidesBottomBarWhenPushed = YES;
+	
+	// Set butterfly rowid
+	FMDatabase *db = [FMDatabase databaseWithPath:DB_PATH];
+	[db setLogsErrors:YES];
+	[db open];
+	NSString *query = @"SELECT ROWID FROM butterflies WHERE name = ? limit 1;";
+	
+	FMResultSet *result = [db executeQuery:query, label.text];
+	
+	while ([result next]) {
+		self.butterflyView.rowID = [[result stringForColumn:@"ROWID"] intValue];
+	}
+	[result close];
+	[db close];
 
 	HIDE_CENTER_BUTTON;
+	[self.navigationController setNavigationBarHidden:NO animated:YES];
 	[self.navigationController pushViewController:self.butterflyView animated:YES];
 }
 

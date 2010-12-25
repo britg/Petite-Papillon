@@ -8,40 +8,40 @@
 
 #import <UIKit/UIKit.h>
 #import <Three20/Three20.h>
-#import "ButterfliesPhotoSource.h"
-#import "AddButterflyPhotoViewController.h"
+#import "BirdsPhotoSource.h"
+#import "AddBirdPhotoViewController.h"
 
 
-@interface ButterflyViewController : UIViewController <TTThumbsViewControllerDelegate, UITabBarDelegate> {
-	NSString *butterfly;
+@interface BirdViewController : UIViewController <TTThumbsViewControllerDelegate, UITabBarDelegate> {
+	NSString *bird;
 	NSInteger rowID;
 	
-	IBOutlet UITabBar *butterflyTabBar;
+	IBOutlet UITabBar *birdTabBar;
 	IBOutlet UIWebView *webView;
 	IBOutlet UIToolbar *webViewToolbar;
 	
-	ButterfliesPhotoSource *photoSet;
+	BirdsPhotoSource *photoSet;
 	TTThumbsViewController *thumbsView;
 	TTPhotoViewController *photoView;
 	IBOutlet UIView *thumbsViewContainer;
 	
 	IBOutlet UIBarButtonItem *addButton;
-	AddButterflyPhotoViewController *addPhotoView;
+	AddBirdPhotoViewController *addPhotoView;
 }
 
-@property (nonatomic, retain) NSString *butterfly;
+@property (nonatomic, retain) NSString *bird;
 @property NSInteger rowID;
-@property (nonatomic, retain) IBOutlet UITabBar *butterflyTabBar;
+@property (nonatomic, retain) IBOutlet UITabBar *birdTabBar;
 @property (nonatomic, retain) IBOutlet UIWebView *webView;
 @property (nonatomic, retain) IBOutlet UIToolbar *webViewToolbar;
 
-@property (nonatomic, retain) ButterfliesPhotoSource *photoSet;
+@property (nonatomic, retain) BirdsPhotoSource *photoSet;
 @property (nonatomic, retain) TTThumbsViewController *thumbsView;
 @property (nonatomic, retain) TTPhotoViewController *photoView;
 @property (nonatomic, retain) IBOutlet UIView *thumbsViewContainer;
 
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *addButton;
-@property (nonatomic, retain) AddButterflyPhotoViewController *addPhotoView;
+@property (nonatomic, retain) AddBirdPhotoViewController *addPhotoView;
 
 - (void)loadWikipedia;
 - (void)loadGoogle;
