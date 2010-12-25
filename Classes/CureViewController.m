@@ -32,7 +32,7 @@
 		self.image.image = [UIImage imageNamed:@"happy.jpg"];
 	} else if (self.selectedMood == 4) {
 		self.image.image = [UIImage imageNamed:@"stressed.jpg"];
-	} else if (self.selectedMood == 4) {
+	} else if (self.selectedMood == 5) {
 		self.image.image = [UIImage imageNamed:@"sassy.jpg"];
 	}
 }
