@@ -98,6 +98,8 @@
 		EAFE115912C51B0000AEEACE /* BirdsPhotoSource.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE115812C51B0000AEEACE /* BirdsPhotoSource.m */; };
 		EAFE115E12C51B6E00AEEACE /* AddBirdPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE115C12C51B6E00AEEACE /* AddBirdPhotoViewController.m */; };
 		EAFE115F12C51B6E00AEEACE /* AddBirdPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE115D12C51B6E00AEEACE /* AddBirdPhotoViewController.xib */; };
+		EAFE11CD12C5933F00AEEACE /* AddBirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAFE11CB12C5933F00AEEACE /* AddBirdViewController.m */; };
+		EAFE11CE12C5933F00AEEACE /* AddBirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAFE11CC12C5933F00AEEACE /* AddBirdViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -572,6 +574,9 @@
 		EAFE115B12C51B6E00AEEACE /* AddBirdPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBirdPhotoViewController.h; sourceTree = "<group>"; };
 		EAFE115C12C51B6E00AEEACE /* AddBirdPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBirdPhotoViewController.m; sourceTree = "<group>"; };
 		EAFE115D12C51B6E00AEEACE /* AddBirdPhotoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBirdPhotoViewController.xib; sourceTree = "<group>"; };
+		EAFE11CA12C5933F00AEEACE /* AddBirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddBirdViewController.h; sourceTree = "<group>"; };
+		EAFE11CB12C5933F00AEEACE /* AddBirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddBirdViewController.m; sourceTree = "<group>"; };
+		EAFE11CC12C5933F00AEEACE /* AddBirdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddBirdViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -763,6 +768,9 @@
 				EAFE115B12C51B6E00AEEACE /* AddBirdPhotoViewController.h */,
 				EAFE115C12C51B6E00AEEACE /* AddBirdPhotoViewController.m */,
 				EAFE115D12C51B6E00AEEACE /* AddBirdPhotoViewController.xib */,
+				EAFE11CA12C5933F00AEEACE /* AddBirdViewController.h */,
+				EAFE11CB12C5933F00AEEACE /* AddBirdViewController.m */,
+				EAFE11CC12C5933F00AEEACE /* AddBirdViewController.xib */,
 			);
 			name = Birds;
 			sourceTree = "<group>";
@@ -1373,6 +1381,7 @@
 				EAFE10E612C517F800AEEACE /* BirdViewController.xib in Resources */,
 				EAFE10E812C519A900AEEACE /* BirdCell.xib in Resources */,
 				EAFE115F12C51B6E00AEEACE /* AddBirdPhotoViewController.xib in Resources */,
+				EAFE11CE12C5933F00AEEACE /* AddBirdViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1412,6 +1421,7 @@
 				EAFE10E512C517F800AEEACE /* BirdViewController.m in Sources */,
 				EAFE115912C51B0000AEEACE /* BirdsPhotoSource.m in Sources */,
 				EAFE115E12C51B6E00AEEACE /* AddBirdPhotoViewController.m in Sources */,
+				EAFE11CD12C5933F00AEEACE /* AddBirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

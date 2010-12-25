@@ -15,6 +15,8 @@
 @synthesize birds;
 @synthesize birdCell;
 @synthesize birdView;
+@synthesize addButton;
+@synthesize addBirdView;
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -24,13 +26,13 @@
     [super viewDidLoad];
 	
     self.navigationItem.title = @"Oiseaux";
-	
-	[self getBirdsFromDB];
+	self.navigationItem.rightBarButtonItem = self.addButton;
 }
 
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+	[self reloadBirds];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -141,6 +143,11 @@
 
 #pragma mark -
 #pragma mark Table view data source
+
+- (void)reloadBirds {
+	[self getBirdsFromDB];
+	[self.tableView reloadData];
+}
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
 	if (isSearching) {
@@ -258,6 +265,18 @@
 	[self.navigationController pushViewController:self.birdView animated:YES];
 }
 
+#pragma mark -
+#pragma mark Actions
+
+- (IBAction)addBird {
+	DebugLog(@"Add bird action called");
+	
+	if (!self.addBirdView) {
+		self.addBirdView = [[AddBirdViewController alloc] initWithNibName:@"AddBirdViewController" bundle:nil];
+	}
+	[self.navigationController pushViewController:self.addBirdView animated:YES];
+}
+
 
 #pragma mark -
 #pragma mark Memory management
@@ -272,6 +291,8 @@
 - (void)viewDidUnload {
     // Relinquish ownership of anything that can be recreated in viewDidLoad or on demand.
     // For example: self.myOutlet = nil;
+	self.addBirdView = nil;
+	self.addButton = nil;
 }
 
 

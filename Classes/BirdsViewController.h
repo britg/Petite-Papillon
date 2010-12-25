@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "BirdViewController.h"
+#import "AddBirdViewController.h"
 
 
 @interface BirdsViewController : UITableViewController {
@@ -23,14 +24,21 @@
 	
 	BirdViewController *birdView;
 	
+	IBOutlet UIBarButtonItem *addButton;
 	
+	AddBirdViewController *addBirdView;
 }
 
 @property (nonatomic, retain) NSMutableArray *birds;
 @property (nonatomic, assign) IBOutlet UITableViewCell *birdCell;
 @property (nonatomic, retain) BirdViewController *birdView;
 
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *addButton;
+
+@property (nonatomic, retain) AddBirdViewController *addBirdView;
+
 
 - (void)getBirdsFromDB;
+- (IBAction)addBird;
 
 @end
